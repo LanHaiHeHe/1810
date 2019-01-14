@@ -4,7 +4,7 @@ $(() => {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: "POST",
-                url: "http://localhost:3000/setting/updateUser",
+                url: "./setting/updateUser",
                 data: {
                     name, 
                     age, 
@@ -58,7 +58,7 @@ $(() => {
                 headers: {
                     token: localStorage.getItem("token")
                 },
-                url: "http://localhost:3000/users/autoLogin",
+                url: "./users/autoLogin",
                 success(data) {
                     resolve(data)
                 }

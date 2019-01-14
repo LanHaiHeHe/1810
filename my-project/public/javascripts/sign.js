@@ -4,7 +4,7 @@ $(()=>{
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: "POST",
-                url: "http://localhost:3000/users/sign",
+                url: "./users/sign",
                 data: {
                     inputEmail,
                     inputPassword
@@ -25,7 +25,7 @@ $(()=>{
         }else{
             let data = await login(inputEmail, inputPassword);
             if(data=='success'){
-                location.href="http://localhost:3000/login.html";
+                location.href="./login.html";
             }else{
                 $("#session_email").val('');
                 $("#session_password").val('');

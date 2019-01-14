@@ -4,7 +4,7 @@ $(() => {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: "POST",
-                url: "http://localhost:3000/users/login",
+                url: "./users/login",
                 data: {
                     inputEmail,
                     inputPassword
